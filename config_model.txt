@@ -1,0 +1,8 @@
+python train.py --model_def config/yolov3-custom10C.cfg --data_config config/custom.data --epochs 10 --batch_size 10 --pretrained_weights weights/darknet53.conv.74
+python detectC.py --image_folder data/samplesC/ --model_def config/yolov3-custom10C.cfg --weights_path checkpoints/model_monitoreo_reservas_pti_99.pth --class_path data/custom/classes.names
+
+python train.py --model_def config/yolov3-custom10C.cfg --data_config config/custom.data --epochs 100--batch_size 10 --pretrained_weights checkpoints/model_number_pti_9.pth
+
+python -m debugpy --listen 5678 ./train.py --model_def config/yolov3-custom2C.cfg --data_config config/custom.data --epochs 100 --batch_size 4 --pretrained_weights weights/darknet53.conv.74
+
+
